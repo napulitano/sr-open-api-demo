@@ -1,4 +1,5 @@
-# Demo App that uses SR OPEN API
+# Demo App that uses SR OPEN API (https://sverigesradio.se/oppetapi)
+
 Deployed at: https://warm-shelf-75689.herokuapp.com/
 
 # Endpoint
