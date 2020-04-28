@@ -1,0 +1,27 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+h1{
+	color:royalblue;
+}
+
+h2{
+	color:#FF0000;
+}
+.navbar-toggler{
+    background-color: #4CAF50; /* Green */
+    border:2px;
+    color: white;
+    padding: 10px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}

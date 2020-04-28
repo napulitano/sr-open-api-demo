@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Test App</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/">FERRARA.SE</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>SR Open API</h1>
+    </div>
+    <div align="center">
+        <h1><span th:text="'Listen: ' + ${channelId}"></span></h1>
+        <audio controls autoplay id="player">
+            <source src="http://sverigesradio.se/topsy/direkt/srapi/" th:attrappend="src=${channelId+'.mp3'}" type="audio/mpeg"/>
+        </audio>
+    </div>
+    <!--ol>
+        <li th:each="channel : ${channels}" th:text="${channel.name}"></li>
+    </ol-->
+    <div style="text-align: center">
+        <button th:each="channel : ${channels}" th:text="${channel.name}" th:id="${channel.id}" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation" th:onclick="javascript:selectChannel([[${channel.id}]]);">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div>
+        <h1><span th:text="'PlayList: ' + ${channelId}+', '+${playList}"></span></h1>
+
+    </div>
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}">
+</script>
+<script>
+    function selectChannel(channel) {
+        window.location.assign("/?channelId="+channel);
+    }
+    var player = document.getElementById('player');
+    player.volume=0.15;
+    player.play();
+</script>
+</body>
+</html>
