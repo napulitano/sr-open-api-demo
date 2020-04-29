@@ -11,3 +11,10 @@ Deployed at: https://warm-shelf-75689.herokuapp.com/
 - start : start date for your search, must be in format yyyy-MM-dd
 - end. : end date for your search, must be in format yyyy-MM-dd
 
+
+# How to run locally?
+
+* checkout the repo from git or download as zip
+* via you favorite terminal go inside the directory where you checkout or unzipped the repo
+* run: mvn clean install
+* start with:  mvn spring-boot:run
