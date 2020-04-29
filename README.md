@@ -14,7 +14,7 @@ Deployed at: https://warm-shelf-75689.herokuapp.com/
 
 # How to run locally?
 
-* checkout the repo from git or download as zip
-* via you favorite terminal go inside the directory where you checkout or unzipped the repo
+* check out the repo from git or download as zip
+* via you favorite terminal go inside the directory where you checked out or unzipped the repo
 * run: mvn clean install
 * start with:  mvn spring-boot:run
