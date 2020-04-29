@@ -10,8 +10,6 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 
-import java.util.Objects;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -33,9 +31,7 @@ public class Song implements Comparable<Song>{
 
     @Override
     public int compareTo(Song o) {
-        log.info("song {}",o);
-        log.info("song {}",this);
-        return Math.abs(this.getRecordlabel().compareTo(o.getRecordlabel()) + this.getArtist().compareTo(o.getArtist()));
+        return this.getArtist().compareTo(o.getArtist());
     }
 
     public String getRecordlabel() {

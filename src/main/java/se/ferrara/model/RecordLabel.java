@@ -10,6 +10,7 @@ import lombok.ToString;
 import org.apache.logging.log4j.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -32,6 +33,7 @@ public class RecordLabel implements Comparable<RecordLabel>{
         if(!songs.contains(song)) {
             songs.add(song);
         }
+        Collections.sort(songs);
     }
 
     @Override
